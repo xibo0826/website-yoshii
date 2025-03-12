@@ -20,7 +20,7 @@
                 <h2 class="text-3xl font-bold mb-8">買取品目</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                     <!-- 銅・真鍮・砲金系 -->
-                    <router-link :to="{ name: 'scrap-detail', params: { categoryId: '1' } }"
+                    <router-link :to="{ name: 'scrap-detail', params: { categoryId: '1' } }" :key="'1'"
                         class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                         <div class="relative h-64">
                             <img src="@/assets/img/scraps/1-01.jpg" alt="銅・真鍮・砲金" class="w-full h-full object-cover" />
@@ -32,7 +32,7 @@
                     </router-link>
 
                     <!-- 電線系 -->
-                    <router-link :to="{ name: 'scrap-detail', params: { categoryId: '2' } }"
+                    <router-link :to="{ name: 'scrap-detail', params: { categoryId: '2' } }" :key="'2'"
                         class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                         <div class="relative h-64">
                             <img src="@/assets/img/scraps/2-01.jpg" alt="電線" class="w-full h-full object-cover" />
@@ -44,7 +44,7 @@
                     </router-link>
 
                     <!-- アルミ・ステンレス系 -->
-                    <router-link :to="{ name: 'scrap-detail', params: { categoryId: '3' } }"
+                    <router-link :to="{ name: 'scrap-detail', params: { categoryId: '3' } }" :key="'3'"
                         class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                         <div class="relative h-64">
                             <img src="@/assets/img/scraps/3-07.jpg" alt="アルミ・ステンレス"
@@ -57,7 +57,7 @@
                     </router-link>
 
                     <!-- 鉛・亜鉛・バッテリー系 -->
-                    <router-link :to="{ name: 'scrap-detail', params: { categoryId: '4' } }"
+                    <router-link :to="{ name: 'scrap-detail', params: { categoryId: '4' } }" :key="'4'"
                         class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                         <div class="relative h-64">
                             <img src="@/assets/img/scraps/4-01.jpg" alt="鉛・亜鉛・バッテリー"
@@ -70,7 +70,7 @@
                     </router-link>
 
                     <!-- 雑品系 -->
-                    <router-link :to="{ name: 'scrap-detail', params: { categoryId: '5' } }"
+                    <router-link :to="{ name: 'scrap-detail', params: { categoryId: '5' } }" :key="'5'"
                         class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                         <div class="relative h-64">
                             <img src="@/assets/img/scraps/5-01.jpg" alt="雑品" class="w-full h-full object-cover" />
@@ -82,7 +82,7 @@
                     </router-link>
 
                     <!-- モーター・トランス系 -->
-                    <router-link :to="{ name: 'scrap-detail', params: { categoryId: '6' } }"
+                    <router-link :to="{ name: 'scrap-detail', params: { categoryId: '6' } }" :key="'6'"
                         class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                         <div class="relative h-64">
                             <img src="@/assets/img/scraps/6-01.jpg" alt="モーター・トランス"
@@ -95,7 +95,7 @@
                     </router-link>
 
                     <!-- 鉄くず -->
-                    <router-link :to="{ name: 'scrap-detail', params: { categoryId: '7' } }"
+                    <router-link :to="{ name: 'scrap-detail', params: { categoryId: '7' } }" :key="'7'"
                         class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                         <div class="relative h-64">
                             <img src="@/assets/img/scraps/7-01.jpg" alt="鉄くず" class="w-full h-full object-cover" />
@@ -107,7 +107,7 @@
                     </router-link>
 
                     <!-- PC・基板系 -->
-                    <router-link :to="{ name: 'scrap-detail', params: { categoryId: '8' } }"
+                    <router-link :to="{ name: 'scrap-detail', params: { categoryId: '8' } }" :key="'8'"
                         class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                         <div class="relative h-64">
                             <img src="@/assets/img/scraps/8-01.jpg" alt="PC・基板" class="w-full h-full object-cover" />

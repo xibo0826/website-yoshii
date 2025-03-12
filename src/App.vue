@@ -1,0 +1,156 @@
+<template>
+  <div id="app">
+    <!-- 顶部Logo区域 -->
+    <div class="bg-white h-24 md:h-28 flex items-center justify-between px-4 md:px-8">
+      <div class="flex items-center">
+        <img src="@/assets/images/logo.svg" alt="" class="h-32 md:h-36" />
+      </div>
+      <!-- Mobile contact buttons and menu -->
+      <div class="flex items-center space-x-1 md:hidden">
+        <!-- Email button -->
+        <a href="mailto:yoshiishirakawa1013@gmail.com"
+          class="p-2 rounded-md border border-gray-300 hover:border-gray-400 transition-colors duration-200">
+          <svg class="h-12 w-12 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+        </a>
+        <!-- Phone button -->
+        <a href="tel:0721606917"
+          class="p-2 rounded-md border border-gray-300 hover:border-gray-400 transition-colors duration-200">
+          <svg class="h-12 w-12 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+        </a>
+        <!-- Hamburger menu button -->
+        <button @click="toggleMenu"
+          class="text-gray-600 hover:text-gray-300 focus:outline-none p-2 rounded-md border border-gray-300 hover:border-gray-400 transition-colors duration-200">
+          <svg class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path v-if="!isMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16" />
+            <path v-else stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <!-- Desktop contact info -->
+      <div class="hidden md:block text-right">
+        <div class="flex items-center justify-end">
+          <i class="fas fa-phone-alt text-gray-800 mr-2"></i>
+          <span class="text-2xl font-bold text-gray-800">07-2160-6917</span>
+        </div>
+        <div class="text-gray-600">営業時間：9:00-18:00</div>
+        <div class="text-gray-600">メール：yoshiishirakawa1013@gmail.com</div>
+      </div>
+    </div>
+
+    <!-- PC导航菜单 -->
+    <nav class="bg-[#222222] w-full hidden md:block">
+      <ul class="flex justify-center items-stretch h-[50px] w-full">
+        <li v-for="(item, index) in menuItems" :key="index" class="flex-1">
+          <router-link :to="item.path"
+            class="text-white border border-gray-600 hover:border-white transition-colors duration-300 h-full flex items-center justify-center font-bold">
+            {{ item.name }}</router-link>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <transition enter-active-class="transition duration-200 ease-out" enter-from-class="opacity-0 -translate-y-1"
+      enter-to-class="opacity-100 translate-y-0" leave-active-class="transition duration-150 ease-in"
+      leave-from-class="opacity-100 translate-y-0" leave-to-class="opacity-0 -translate-y-1">
+      <div v-if="isMenuOpen" class="md:hidden">
+        <!-- Mobile navigation -->
+        <nav class="bg-[#222222]">
+          <div class="px-2 py-3">
+            <router-link v-for="(item, index) in menuItems" :key="index" :to="item.path"
+              class="block text-white py-2 px-4 text-base font-medium hover:bg-gray-700 rounded transition-colors duration-200"
+              @click="closeMenu">
+              {{ item.name }}
+            </router-link>
+          </div>
+        </nav>
+      </div>
+    </transition>
+
+    <router-view />
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      isMenuOpen: false,
+      menuItems: [
+        { name: 'ホーム', path: '/home' },
+        { name: '会社情報', path: '/company' },
+        { name: 'ストラップ買取', path: '/strap' },
+        { name: '中古買取', path: '/used' },
+        { name: '出張買取', path: '/visit' },
+        { name: '骨董品買取・片付け', path: '/antique' },
+        { name: '会社案内', path: '/guide' },
+        { name: '新着情報', path: '/news' }
+      ]
+    };
+  },
+  methods: {
+    toggleMenu() {
+      this.isMenuOpen = !this.isMenuOpen;
+    },
+    closeMenu() {
+      this.isMenuOpen = false;
+    }
+  },
+  watch: {
+    $route() {
+      this.closeMenu();
+    }
+  },
+  mounted() {
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!this.$el.contains(e.target)) {
+        this.closeMenu();
+      }
+    });
+  },
+  beforeDestroy() {
+    document.removeEventListener('click', this.closeMenu);
+  }
+};
+</script>
+
+<style>
+.nav-link {
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  border-bottom: 2px solid white;
+}
+
+/* Add smooth transition for mobile menu */
+.mobile-menu-enter-active,
+.mobile-menu-leave-active {
+  transition: all 0.3s ease;
+}
+
+.mobile-menu-enter-from,
+.mobile-menu-leave-to {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+/* Prevent scrolling when mobile menu is open */
+.menu-open {
+  overflow: hidden;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .nav-link {
+    padding: 0.75rem 1rem;
+  }
+}
+</style>

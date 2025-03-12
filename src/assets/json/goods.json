@@ -1,0 +1,410 @@
+[
+    {
+        "typeId": "1",
+        "name": "エアコンの真鍮",
+        "jan": "1-01",
+        "price": "￥550円/kg（税込）",
+        "image": ".\/assets\/img\/scraps\/1-01.jpg",
+        "remark": ""
+    },
+    {
+        "typeId": "1",
+        "name": "エアコンパイプ",
+        "jan": "1-02",
+        "price": "￥650円/kg（税込）",
+        "image": ".\/assets\/img\/scraps\/1-02.jpg",
+        "remark": "エアコンの設置の際に使用される被覆銅管が主な買取対象となります。（真鍮付きも買い取り可）"
+    },
+    {
+        "typeId": "1",
+        "name": "ピカ銅",
+        "jan": "1-03",
+        "price": "￥1,450円/kg（税込）",
+        "image": ".\/assets\/img\/scraps\/1-03.jpg",
+        "remark": "単線の断面直径が基本1.6mm以上（1.3ｍｍの物は従業員判断により現物確認の後、買取可能な場合もあり）の銅線で、付き物・表面劣化（変色）・メッキ・エナメル・汚れ・塗装等がないもの。※注意　被覆の残りが付着している物はピカ線として買取不可　 主にはIV、VVF、CV、VVRの被覆を除去したものが買取対象となります。"
+    },
+    {
+        "typeId": "1",
+        "name": "プラ付き真鍮",
+        "jan": "1-04",
+        "price": "¥750円/kg（税込）",
+        "image": ".\/assets\/img\/scraps\/1-04.jpg",
+        "remark": ""
+    },
+    {
+        "typeId": "1",
+        "name": "下銅",
+        "jan": "1-05",
+        "price": "￥1,100円/kg（税込）",
+        "image": ".\/assets\/img\/scraps\/1-05.jpg",
+        "remark": ""
+    },
+    {
+        "typeId": "1",
+        "name": "並銅",
+        "jan": "1-06",
+        "price": "￥1,390円/kg（税込）",
+        "image": ".\/assets\/img\/scraps\/1-06.jpg",
+        "remark": ""
+    },
+    {
+        "typeId": "1",
+        "name": "真鍮",
+        "jan": "1-07",
+        "price": "￥950円/kg（税込）",
+        "image": ".\/assets\/img\/scraps\/1-07.jpg",
+        "remark": ""
+    },
+    {
+        "typeId": "1",
+        "name": "砲金",
+        "jan": "1-08",
+        "price": "￥1,100円/kg（税込）",
+        "image": ".\/assets\/img\/scraps\/1-08.jpg",
+        "remark": ""
+    },
+    {
+        "typeId": "1",
+        "name": "込銅",
+        "jan": "1-09",
+        "price": "￥1,350円/kg（税込）",
+        "image": ".\/assets\/img\/scraps\/1-09.jpg",
+        "remark": "一号銅と同じく銅管等の汚れや塗装がないもので青錆やメッキ、エナメル、溶接部分、少量の真鍮の付き物等あるものが買取対象となります。（※基本的に真鍮は除去してください)　油や砂付き等は別買取になります。"
+    },
+    {
+        "typeId": "2",
+        "name": "VA線(VVFケーブル)",
+        "jan": "2-01",
+        "price": "￥585円/kg（税込）",
+        "image": ".\/assets\/img\/scraps\/2-01.jpg",
+        "remark": "エアコンや照明等の配線に使用されるVVFケーブルでコネクタ除去済みのものが買取対象となります。"
+    },
+    {
+        "typeId": "2",
+        "name": "一本線(銅率80%以上)",
+        "jan": "2-02",
+        "price": "￥1,110円/kg（税込）",
+        "image": ".\/assets\/img\/scraps\/2-02.jpg",
+        "remark": "単線の断面直径1.3mm以上及び銅率80％以上の被覆付き銅線が買取対象となります。（CVは単芯60sq以上の物が買取対象となります。）"
+    },
+    {
+        "typeId": "2",
+        "name": "三本線(銅率65%以上)",
+        "jan": "2-03",
+        "price": "￥760円/kg（税込）",
+        "image": ".\/assets\/img\/scraps\/2-03.jpg",
+        "remark": "単線の断面直径1.3mm以上及び銅率60％以上の被覆付き銅線が買取対象となります。（CVは単芯14、22sq以上の物が買取対象となります。）錫引き銅線は一本線・三本線共に別買取となります。（錫引きとは錫メッキのこと）"
+    },
+    {
+        "typeId": "2",
+        "name": "雑線(家電線)",
+        "jan": "2-04",
+        "price": "￥390円/kg（税込）",
+        "image": ".\/assets\/img\/scraps\/2-04.jpg",
+        "remark": "主に家電製品に使用されている電線でコネクタ除去済みのものが買取対象となります。"
+    },
+    {
+        "typeId": "3",
+        "name": "アルミガラA(付物なし)",
+        "jan": "3-01",
+        "price": "￥240円/kg（税込）",
+        "image": ".\/assets\/img\/scraps\/3-01.jpg",
+        "remark": "アルミ製のフライパンや鍋（持ち手付き含む）、梯子、脚立等が買取対象となります。※付物の度合いにより別買取となる場合がございます。"
+    },
+    {
+        "typeId": "3",
+        "name": "アルミガラB(付物あり)",
+        "jan": "3-02",
+        "price": "￥170円/kg（税込）",
+        "image": ".\/assets\/img\/scraps\/3-02.jpg",
+        "remark": "アルミサッシ（アルミの窓枠等に用いる建材）少量の付き物がついているサッシが買取対象となります。（付き物が多いものと網戸の網付きは別品目での買取となります。）"
+    },
+    {
+        "typeId": "3",
+        "name": "アルミサッシA(付物なし)",
+        "jan": "3-03",
+        "price": "￥300円/kg（税込）",
+        "image": ".\/assets\/img\/scraps\/3-03.jpg",
+        "remark": ""
+    },
+    {
+        "typeId": "3",
+        "name": "アルミサッシB(付物あり）",
+        "jan": "3-04",
+        "price": "¥270円/kg（税込）",
+        "image": ".\/assets\/img\/scraps\/3-04.jpg",
+        "remark": ""
+    },
+    {
+        "typeId": "3",
+        "name": "アルミホイール",
+        "jan": "3-05",
+        "price": "￥330円/kg（税込）",
+        "image": ".\/assets\/img\/scraps\/3-05.jpg",
+        "remark": "自動車用のアルミホイールが買取対象となります。（トラック、バイク用は別品目での買取となります。）"
+    },
+    {
+        "typeId": "3",
+        "name": "アルミラジエター",
+        "jan": "3-06",
+        "price": "￥50円/kg（税込）",
+        "image": ".\/assets\/img\/scraps\/3-06.jpg",
+        "remark": "ラジエーターとは液体や気体の熱を放熱する装置である。（フィンとチューブがアルミのものが買取対象となります。※プラ、ファン等は除去してください。）"
+    },
+    {
+        "typeId": "3",
+        "name": "アルミ缶",
+        "jan": "3-07",
+        "price": "￥262円/kg（税込）",
+        "image": ".\/assets\/img\/scraps\/3-07.jpg",
+        "remark": ""
+    },
+    {
+        "typeId": "3",
+        "name": "ステンレス",
+        "jan": "3-08",
+        "price": "￥180円/kg（税込）",
+        "image": ".\/assets\/img\/scraps\/3-08.jpg",
+        "remark": ""
+    },
+    {
+        "typeId": "3",
+        "name": "ホイール付きタイヤ・大",
+        "jan": "3-09",
+        "price": "￥2,200円/本（税込）",
+        "image": ".\/assets\/img\/scraps\/3-09.jpg",
+        "remark": "15インチ以上"
+    },
+    {
+        "typeId": "3",
+        "name": "ホイール付きタイヤ・小",
+        "jan": "3-10",
+        "price": "￥1,200円/本（税込）",
+        "image": ".\/assets\/img\/scraps\/3-10.jpg",
+        "remark": "13インチ以下"
+    },
+    {
+        "typeId": "4",
+        "name": "バッテリーA",
+        "jan": "4-01",
+        "price": "￥110円/kg（税込）",
+        "image": ".\/assets\/img\/scraps\/4-01.jpg",
+        "remark": ""
+    },
+    {
+        "typeId": "4",
+        "name": "バッテリーB",
+        "jan": "4-02",
+        "price": "￥60円/kg（税込）",
+        "image": ".\/assets\/img\/scraps\/4-02.jpg",
+        "remark": ""
+    },
+    {
+        "typeId": "4",
+        "name": "亜鉛",
+        "jan": "4-03",
+        "price": "￥130円/kg（税込）",
+        "image": ".\/assets\/img\/scraps\/4-03.jpg",
+        "remark": ""
+    },
+    {
+        "typeId": "4",
+        "name": "鉛",
+        "jan": "4-04",
+        "price": "¥100円/kg（税込）",
+        "image": ".\/assets\/img\/scraps\/4-04.jpg",
+        "remark": "鉛は主に水道やガスの輸送管、錘に使われています。鉛管、鉛板が買取対象となります。（鉛錘や異物付きは格下げの買取になり、活字鉛、半田、バランスウェイト等は別品目での買取となります。）"
+    },
+    {
+        "typeId": "5",
+        "name": "エアコンラジエター",
+        "jan": "5-01",
+        "price": "￥680円/kg（税込）",
+        "image": ".\/assets\/img\/scraps\/5-01.jpg",
+        "remark": "ラジエーターとは液体や気体の熱を放熱する装置である。（銅管が使用されているものが買取対象となります。）"
+    },
+    {
+        "typeId": "5",
+        "name": "ガスメーター",
+        "jan": "5-02",
+        "price": "￥60円/kg（税込）",
+        "image": ".\/assets\/img\/scraps\/5-02.jpg",
+        "remark": "ガス消費量を測る計量器（アルミ製）が買取対象となります。（鉄製のものは別品目での買取となります。）"
+    },
+    {
+        "typeId": "5",
+        "name": "ガス給湯器",
+        "jan": "5-03",
+        "price": "￥280円/kg（税込）",
+        "image": ".\/assets\/img\/scraps\/5-03.jpg",
+        "remark": "主にガス給湯器が買取対象となります。（バランス形ふろがまは別品目での買取となります。）"
+    },
+    {
+        "typeId": "5",
+        "name": "ブレーカー",
+        "jan": "5-04",
+        "price": "¥100円/kg（税込）",
+        "image": ".\/assets\/img\/scraps\/5-04.jpg",
+        "remark": ""
+    },
+    {
+        "typeId": "5",
+        "name": "工業雑品",
+        "jan": "5-05",
+        "price": "￥0円/kg（税込）",
+        "image": ".\/assets\/img\/scraps\/5-05.jpg",
+        "remark": ""
+    },
+    {
+        "typeId": "5",
+        "name": "手動工具",
+        "jan": "5-06",
+        "price": "￥200円/kg（税込）",
+        "image": ".\/assets\/img\/scraps\/5-06.jpg",
+        "remark": ""
+    },
+    {
+        "typeId": "5",
+        "name": "業務用エアコン",
+        "jan": "5-07",
+        "price": "￥180円/kg（税込）",
+        "image": ".\/assets\/img\/scraps\/5-07.jpg",
+        "remark": ""
+    },
+    {
+        "typeId": "5",
+        "name": "電動工具",
+        "jan": "5-08",
+        "price": "￥150円/kg（税込）",
+        "image": ".\/assets\/img\/scraps\/5-08.jpg",
+        "remark": ""
+    },
+    {
+        "typeId": "6",
+        "name": "コンプレッサーモーター",
+        "jan": "6-01",
+        "price": "￥100円/kg（税込）",
+        "image": ".\/assets\/img\/scraps\/6-01.jpg",
+        "remark": ""
+    },
+    {
+        "typeId": "6",
+        "name": "セル・ダイナモ",
+        "jan": "6-02",
+        "price": "￥180円/kg（税込）",
+        "image": ".\/assets\/img\/scraps\/6-02.jpg",
+        "remark": ""
+    },
+    {
+        "typeId": "6",
+        "name": "トランス",
+        "jan": "6-03",
+        "price": "￥120円/kg（税込）",
+        "image": ".\/assets\/img\/scraps\/6-03.jpg",
+        "remark": ""
+    },
+    {
+        "typeId": "6",
+        "name": "トランスコア小",
+        "jan": "6-04",
+        "price": "¥230円/kg（税込）",
+        "image": ".\/assets\/img\/scraps\/6-04.jpg",
+        "remark": "変圧器（トランス）の中にある鉄心に銅コイルが巻き付けてあるトランスコアが買取対象となります。（中にはアルミコイルもあるので注意が必要です。）"
+    },
+    {
+        "typeId": "6",
+        "name": "銅トランスコア",
+        "jan": "6-05",
+        "price": "￥200円/kg（税込）",
+        "image": ".\/assets\/img\/scraps\/6-05.jpg",
+        "remark": ""
+    },
+    {
+        "typeId": "6",
+        "name": "黒モーター",
+        "jan": "6-06",
+        "price": "￥120円/kg（税込）",
+        "image": ".\/assets\/img\/scraps\/6-06.jpg",
+        "remark": ""
+    },
+    {
+        "typeId": "7",
+        "name": "鉄A",
+        "jan": "7-01",
+        "price": "￥52円/kg（税込）",
+        "image": ".\/assets\/img\/scraps\/7-01.jpg",
+        "remark": ""
+    },
+    {
+        "typeId": "7",
+        "name": "鉄B",
+        "jan": "7-02",
+        "price": "￥50円/kg（税込）",
+        "image": ".\/assets\/img\/scraps\/7-02.jpg",
+        "remark": ""
+    },
+    {
+        "typeId": "7",
+        "name": "鉄C",
+        "jan": "7-03",
+        "price": "￥38円/kg（税込）",
+        "image": ".\/assets\/img\/scraps\/7-03.jpg",
+        "remark": ""
+    },
+    {
+        "typeId": "7",
+        "name": "鉄板",
+        "jan": "7-04",
+        "price": "¥70円/kg（税込）",
+        "image": ".\/assets\/img\/scraps\/7-04.jpg",
+        "remark": ""
+    },
+    {
+        "typeId": "8",
+        "name": "CPU",
+        "jan": "8-01",
+        "price": "￥1,500円/kg（税込）",
+        "image": ".\/assets\/img\/scraps\/8-01.jpg",
+        "remark": ""
+    },
+    {
+        "typeId": "8",
+        "name": "ハードディスク（HDD)",
+        "jan": "8-02",
+        "price": "￥300円/kg（税込）",
+        "image": ".\/assets\/img\/scraps\/8-02.jpg",
+        "remark": ""
+    },
+    {
+        "typeId": "8",
+        "name": "パソコン基板",
+        "jan": "8-03",
+        "price": "￥1,600円/kg（税込）",
+        "image": ".\/assets\/img\/scraps\/8-03.jpg",
+        "remark": ""
+    },
+    {
+        "typeId": "8",
+        "name": "パソコン本体",
+        "jan": "8-04",
+        "price": "¥1,200円/kg（税込）",
+        "image": ".\/assets\/img\/scraps\/8-04.jpg",
+        "remark": ""
+    },
+    {
+        "typeId": "8",
+        "name": "メモリー",
+        "jan": "8-05",
+        "price": "￥3,000円/kg（税込）",
+        "image": ".\/assets\/img\/scraps\/8-05.jpg",
+        "remark": ""
+    },
+    {
+        "typeId": "8",
+        "name": "家電基板",
+        "jan": "8-06",
+        "price": "￥220円/kg（税込）",
+        "image": ".\/assets\/img\/scraps\/8-06.jpg",
+        "remark": ""
+    }
+]

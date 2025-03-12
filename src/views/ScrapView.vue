@@ -20,7 +20,7 @@
                 <h2 class="text-3xl font-bold mb-8">買取品目</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                     <!-- 銅・真鍮・砲金系 -->
-                    <div
+                    <router-link :to="{ name: 'scrap-detail', params: { categoryId: '1' } }"
                         class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                         <div class="relative h-64">
                             <img src="@/assets/img/scraps/1-01.jpg" alt="銅・真鍮・砲金" class="w-full h-full object-cover" />
@@ -29,10 +29,10 @@
                                 <i class="fas fa-coins mr-2"></i>銅・真鍮・砲金系
                             </h3>
                         </div>
-                    </div>
+                    </router-link>
 
                     <!-- 電線系 -->
-                    <div
+                    <router-link :to="{ name: 'scrap-detail', params: { categoryId: '2' } }"
                         class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                         <div class="relative h-64">
                             <img src="@/assets/img/scraps/2-01.jpg" alt="電線" class="w-full h-full object-cover" />
@@ -41,10 +41,10 @@
                                 <i class="fas fa-bolt mr-2"></i>電線系
                             </h3>
                         </div>
-                    </div>
+                    </router-link>
 
                     <!-- アルミ・ステンレス系 -->
-                    <div
+                    <router-link :to="{ name: 'scrap-detail', params: { categoryId: '3' } }"
                         class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                         <div class="relative h-64">
                             <img src="@/assets/img/scraps/3-07.jpg" alt="アルミ・ステンレス"
@@ -54,10 +54,10 @@
                                 <i class="fas fa-layer-group mr-2"></i>アルミ・ステンレス系
                             </h3>
                         </div>
-                    </div>
+                    </router-link>
 
                     <!-- 鉛・亜鉛・バッテリー系 -->
-                    <div
+                    <router-link :to="{ name: 'scrap-detail', params: { categoryId: '4' } }"
                         class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                         <div class="relative h-64">
                             <img src="@/assets/img/scraps/4-01.jpg" alt="鉛・亜鉛・バッテリー"
@@ -67,10 +67,10 @@
                                 <i class="fas fa-car-battery mr-2"></i>鉛・亜鉛・バッテリー系
                             </h3>
                         </div>
-                    </div>
+                    </router-link>
 
                     <!-- 雑品系 -->
-                    <div
+                    <router-link :to="{ name: 'scrap-detail', params: { categoryId: '5' } }"
                         class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                         <div class="relative h-64">
                             <img src="@/assets/img/scraps/5-01.jpg" alt="雑品" class="w-full h-full object-cover" />
@@ -79,10 +79,10 @@
                                 <i class="fas fa-box-open mr-2"></i>雑品系
                             </h3>
                         </div>
-                    </div>
+                    </router-link>
 
                     <!-- モーター・トランス系 -->
-                    <div
+                    <router-link :to="{ name: 'scrap-detail', params: { categoryId: '6' } }"
                         class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                         <div class="relative h-64">
                             <img src="@/assets/img/scraps/6-01.jpg" alt="モーター・トランス"
@@ -92,10 +92,10 @@
                                 <i class="fas fa-cogs mr-2"></i>モーター・トランス系
                             </h3>
                         </div>
-                    </div>
+                    </router-link>
 
                     <!-- 鉄くず -->
-                    <div
+                    <router-link :to="{ name: 'scrap-detail', params: { categoryId: '7' } }"
                         class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                         <div class="relative h-64">
                             <img src="@/assets/img/scraps/7-01.jpg" alt="鉄くず" class="w-full h-full object-cover" />
@@ -104,10 +104,10 @@
                                 <i class="fas fa-industry mr-2"></i>鉄くず
                             </h3>
                         </div>
-                    </div>
+                    </router-link>
 
                     <!-- PC・基板系 -->
-                    <div
+                    <router-link :to="{ name: 'scrap-detail', params: { categoryId: '8' } }"
                         class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                         <div class="relative h-64">
                             <img src="@/assets/img/scraps/8-01.jpg" alt="PC・基板" class="w-full h-full object-cover" />
@@ -116,7 +116,7 @@
                                 <i class="fas fa-microchip mr-2"></i>PC・基板系
                             </h3>
                         </div>
-                    </div>
+                    </router-link>
                 </div>
             </div>
 
@@ -158,6 +158,27 @@
                             <p class="text-gray-600">その場で現金でのお支払い</p>
                         </div>
                     </div>
+                </div>
+            </div>
+
+            <!-- 注意事項 -->
+            <div class="mb-16">
+                <h2 class="text-3xl font-bold mb-8">買取に関する注意事項</h2>
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <ul class="space-y-4 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-exclamation-circle text-[#2E7D32] mt-1 mr-3"></i>
+                            <span>相場により価格が変動する場合がございます。詳しくはお問い合わせください。</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-exclamation-circle text-[#2E7D32] mt-1 mr-3"></i>
+                            <span>買取には身分証明書が必要です。</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-exclamation-circle text-[#2E7D32] mt-1 mr-3"></i>
+                            <span>盗品や違法な物品の買取は一切行っておりません。</span>
+                        </li>
+                    </ul>
                 </div>
             </div>
 

@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import CompanyView from '../views/CompanyView.vue'
 import ScrapView from '../views/ScrapView.vue'
+import ScrapDetailView from '../views/ScrapDetailView.vue'
 
 Vue.use(VueRouter)
 
@@ -24,8 +25,13 @@ const routes = [
     },
     {
         path: '/scrap',
-        name: 'scrap',
+        name: 'scrap-list',
         component: ScrapView
+    },
+    {
+        path: '/scrap/:categoryId',
+        name: 'scrap-detail',
+        component: ScrapDetailView
     }
 ]
 

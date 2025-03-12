@@ -2,7 +2,7 @@
   <div class="min-h-screen">
     <!-- Banner区域 -->
     <div class="relative h-[500px]">
-      <swiper class="h-full" :options="swiperOption">
+      <swiper :options="swiperOption" class="h-full">
         <swiper-slide v-for="(slide, index) in bannerSlides" :key="index">
           <div class="relative h-full">
             <img :src="slide.image" class="w-full h-full object-cover" alt="banner" />
@@ -14,6 +14,7 @@
             </div>
           </div>
         </swiper-slide>
+        <div class="swiper-pagination" slot="pagination"></div>
       </swiper>
     </div>
     <div class="container mx-auto px-4 py-12">
@@ -78,7 +79,10 @@
 </template>
 <script>
 import { Swiper, SwiperSlide } from 'vue-awesome-swiper';
+import 'swiper/css/swiper.css';
+
 export default {
+  name: 'HomeView',
   components: {
     Swiper,
     SwiperSlide
@@ -112,53 +116,77 @@ export default {
       swiperOption: {
         loop: true,
         autoplay: {
-          delay: 5000
+          delay: 5000,
+          disableOnInteraction: false
         },
         pagination: {
-          el: '.swiper-pagination'
-        },
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev'
+          el: '.swiper-pagination',
+          clickable: true
         }
       },
       bannerSlides: [
         {
-          image: 'https://ai-public.mastergo.com/ai/img_res/c19fa4519c3c1f95de4e224879086ebf.jpg',
-          title: '专业资源回收，循环再利用',
-          description: '致力于为环境保护贡献力量'
-        },
-        {
-          image: 'https://ai-public.mastergo.com/ai/img_res/d1264701aae4313c8cdb490683b395ab.jpg',
+          image: require('@/assets/img/banner1.jpg'),
           title: '専門的な鑑定、適正価格',
           description: '最高品質のリサイクルサービスを提供'
         },
         {
-          image: 'https://ai-public.mastergo.com/ai/img_res/50583e23a27755218eb65cd25f57733d.jpg',
-          title: '绿色环保，可持续发展',
-          description: '创造更美好的未来'
+          image: require('@/assets/img/banner2.jpg'),
+          title: '出張買取、即日対応',
+          description: 'お客様のご都合に合わせて、スピーディーに対応いたします'
+        },
+        {
+          image: require('@/assets/img/banner3.jpg'),
+          title: '安心・信頼のサービス',
+          description: '経験豊富なスタッフが丁寧に対応いたします'
         }
       ],
       categories: [
         {
           name: 'スクラップ買取',
-          image: 'https://ai-public.mastergo.com/ai/img_res/4a76874909190949d9c0229809e47c8b.jpg'
+          image: require('@/assets/img/category1.jpg')
         },
         {
           name: '中古買取',
-          image: 'https://ai-public.mastergo.com/ai/img_res/bfe4d607ddb9db79956ff287fb7bab88.jpg'
+          image: require('@/assets/img/category2.jpg')
         },
         {
           name: '骨董品買取・片付け',
-          image: 'https://ai-public.mastergo.com/ai/img_res/c59613c215546e1b3b392452a746ee40.jpg'
+          image: require('@/assets/img/category3.jpg')
         },
         {
           name: '出張買取',
-          image: 'https://ai-public.mastergo.com/ai/img_res/5086d82f6b368d2cdebe3848701704ff.jpg'
+          image: require('@/assets/img/category4.jpg')
         }
       ]
     };
   }
 };
 </script>
-<style scoped></style>
+<style scoped>
+.swiper-container {
+  height: 100%;
+  width: 100%;
+}
+
+.swiper-pagination-bullet {
+  background: white !important;
+  opacity: 0.6;
+}
+
+.swiper-pagination-bullet-active {
+  background: white !important;
+  opacity: 1;
+}
+
+/* Responsive text sizes */
+@media (max-width: 768px) {
+  .text-4xl {
+    font-size: 2rem;
+  }
+
+  .text-xl {
+    font-size: 1.1rem;
+  }
+}
+</style>

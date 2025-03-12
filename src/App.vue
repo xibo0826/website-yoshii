@@ -39,7 +39,7 @@
           <i class="fas fa-phone-alt text-gray-800 mr-2"></i>
           <span class="text-2xl font-bold text-gray-800">07-2160-6917</span>
         </div>
-        <div class="text-gray-600">営業時間：9:00-18:00</div>
+        <div class="text-gray-600">営業時間：8:00-18:00</div>
         <div class="text-gray-600">メール：yoshiishirakawa1013@gmail.com</div>
       </div>
     </div>

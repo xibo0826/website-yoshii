@@ -82,7 +82,7 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           <div>
             <h3 class="text-xl font-bold mb-4">嘉溢株式会社</h3>
-            <p class="text-gray-400">大阪府富田林市中野町一丁目464番地4</p>
+            <p class="text-gray-400">〒584-0021<br>大阪府富田林市中野町一丁目464番地4</p>
           </div>
           <!-- <div>
             <h3 class="text-xl font-bold mb-4">メニュー</h3>
@@ -129,7 +129,7 @@ export default {
       menuItems: [
         { name: 'ホーム', path: '/home' },
         { name: '会社情報', path: '/company' },
-        { name: 'ストラップ買取', path: '/strap' },
+        { name: 'スクラップ買取', path: '/scrap' },
         { name: '中古買取', path: '/used' },
         { name: '出張買取', path: '/visit' },
         { name: '骨董品買取・片付け', path: '/antique' },

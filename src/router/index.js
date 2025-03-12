@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import CompanyView from '../views/CompanyView.vue'
+import ScrapView from '../views/ScrapView.vue'
 
 Vue.use(VueRouter)
 
@@ -14,6 +16,16 @@ const routes = [
         path: '/home',
         name: 'home',
         component: HomeView
+    },
+    {
+        path: '/company',
+        name: 'company',
+        component: CompanyView
+    },
+    {
+        path: '/scrap',
+        name: 'scrap',
+        component: ScrapView
     }
 ]
 

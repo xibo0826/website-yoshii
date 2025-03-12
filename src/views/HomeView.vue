@@ -16,7 +16,6 @@
         </swiper-slide>
       </swiper>
     </div>
-    <!-- 主要内容区域 -->
     <div class="container mx-auto px-4 py-12">
       <!-- 新着情报 -->
       <div class="mb-16">
@@ -45,10 +44,6 @@
       <div class="mb-16">
         <div class="flex items-center justify-between mb-12">
           <h2 class="text-3xl font-bold">事業内容</h2>
-          <a href="#" class="flex items-center text-[#81C784] hover:text-[#2E7D32] transition-colors duration-300">
-            <span class="mr-2">更多</span>
-            <i class="fas fa-chevron-right text-sm"></i>
-          </a>
         </div>
         <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
           <div v-for="(category, index) in categories" :key="index" class="rounded-lg overflow-hidden shadow-lg">
@@ -59,68 +54,29 @@
           </div>
         </div>
       </div>
-      <!-- 公司地图 -->
+      <!-- アクセスマップ -->
       <div class="mb-16">
         <div class="mb-12">
           <h2 class="text-3xl font-bold">アクセスマップ</h2>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2">
           <div>
-            <img src="https://ai-public.mastergo.com/ai/img_res/86d1173623d27bef23b41054aec45bd2.jpg" alt="公司外观"
-              class="w-full h-[400px] object-cover" />
+            <img src="@/assets/img/company.jpg" alt="会社外観" class="w-full h-[450px] object-cover" />
           </div>
           <div>
-            <div ref="mapContainer" class="w-full h-[400px]"></div>
+            <div class="w-full h-[400px]">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d821.9045369291332!2d135.60700867951795!3d34.51256374796242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600129d101c7d1e7%3A0xbac9db9e6c08f1e!2z44CSNTg0LTAwMjEg5aSn6Ziq5bqc5a-M55Sw5p6X5biC5Lit6YeO55S677yR5LiB55uu77yU77yW77yU4oiS77yU!5e0!3m2!1sja!2sjp!4v1737964640672!5m2!1sja!2sjp"
+                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- 页脚 -->
-    <footer class="bg-gray-900 text-white py-12">
-      <div class="container mx-auto px-4">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <!-- 公司信息 -->
-          <div>
-            <h3 class="text-xl font-bold mb-4">联系我们</h3>
-            <p class="mb-2">地址：上海市浦东新区张江高科技园区</p>
-            <p class="mb-2">电话：400-888-9999</p>
-            <p>邮箱：contact@recycling.com</p>
-          </div>
-          <!-- 导航链接 -->
-          <div>
-            <h3 class="text-xl font-bold mb-4">快速导航</h3>
-            <ul class="space-y-2">
-              <li v-for="(item, index) in navItems" :key="index">
-                <a href="#" class="hover:text-[#81C784]">{{ item }}</a>
-              </li>
-            </ul>
-          </div>
-          <!-- 社交媒体 -->
-          <div>
-            <h3 class="text-xl font-bold mb-4">关注我们</h3>
-            <div class="grid grid-cols-2 gap-4">
-              <div class="text-center">
-                <img src="https://ai-public.mastergo.com/ai/img_res/2d1f1a89ca3eac853cb18da9ddba89a0.jpg" alt="微信二维码"
-                  class="w-30 h-30 mx-auto mb-2" />
-                <p>微信公众号</p>
-              </div>
-              <div class="text-center">
-                <img src="https://ai-public.mastergo.com/ai/img_res/cfe725bd453eed4174aaa4160242e65a.jpg" alt="LINE二维码"
-                  class="w-30 h-30 mx-auto mb-2" />
-                <p>LINE</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="mt-8 pt-8 border-t border-gray-800 text-center">
-          <p>&copy; 2024 环保回收利用. 版权所有</p>
-        </div>
-      </div>
-    </footer>
   </div>
 </template>
 <script>
-/* global google */
 import { Swiper, SwiperSlide } from 'vue-awesome-swiper';
 export default {
   components: {
@@ -128,45 +84,8 @@ export default {
     SwiperSlide
   },
   mounted() {
-    this.initMap();
   },
   methods: {
-    initMap() {
-      const script = document.createElement('script');
-      script.src = `https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initializeMap`;
-      script.async = true;
-      script.defer = true;
-      window.initializeMap = () => {
-        const location = { lat: 31.203, lng: 121.597 };
-        const map = new google.maps.Map(this.$refs.mapContainer, {
-          zoom: 15,
-          center: location,
-          styles: [
-            {
-              featureType: 'all',
-              elementType: 'geometry',
-              stylers: [{ color: '#242f3e' }]
-            },
-            {
-              featureType: 'water',
-              elementType: 'geometry',
-              stylers: [{ color: '#17263c' }]
-            },
-            {
-              featureType: 'water',
-              elementType: 'labels.text.fill',
-              stylers: [{ color: '#515c6d' }]
-            }
-          ]
-        });
-        new google.maps.Marker({
-          position: location,
-          map: map,
-          title: '环保回收利用'
-        });
-      };
-      document.head.appendChild(script);
-    }
   },
   data() {
     return {

@@ -3,7 +3,7 @@
     <!-- 顶部Logo区域 -->
     <div class="bg-white h-24 md:h-28 flex items-center justify-between px-4 md:px-8">
       <div class="flex items-center">
-        <img src="@/assets/images/logo.svg" alt="" class="h-32 md:h-36" />
+        <img src="@/assets/img/logo.svg" alt="" class="h-32 md:h-36" />
       </div>
       <!-- Mobile contact buttons and menu -->
       <div class="flex items-center space-x-1 md:hidden">
@@ -73,7 +73,51 @@
       </div>
     </transition>
 
+    <!-- 主页面 -->
     <router-view />
+
+    <!-- 页脚 -->
+    <footer class="bg-gray-900 text-white mt-12">
+      <div class="container mx-auto px-6 py-12">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+          <div>
+            <h3 class="text-xl font-bold mb-4">嘉溢株式会社</h3>
+            <p class="text-gray-400">大阪府富田林市中野町一丁目464番地4</p>
+          </div>
+          <!-- <div>
+            <h3 class="text-xl font-bold mb-4">メニュー</h3>
+            <ul class="space-y-2 text-gray-400">
+              <li><a href="#news">お知らせ</a></li>
+              <li><a href="#price">買取商材・価格</a></li>
+              <li><a href="#map">アクセス</a></li>
+            </ul>
+          </div> -->
+          <div>
+            <h3 class="text-xl font-bold mb-4">連絡先</h3>
+            <ul class="space-y-2 text-gray-400">
+              <li>電話：07-2160-6917</li>
+              <li>FAX：07-2160-6916</li>
+              <li>携帯：080-9125-6888(日本語)</li>
+              <li>携帯：090-3942-7888(中国語)</li>
+              <li>メール：yoshiishirakawa1013@gmail.com</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold mb-4">SNS</h3>
+            <div class="flex space-x-4">
+              <img src="@/assets/img/line.jpg" class="w-[160px]" alt="line">
+              <img src="./assets/img/wechat.jpg" class="w-[160px]" alt="wechat">
+            </div>
+          </div>
+        </div>
+        <div class="border-t border-gray-800 pt-8">
+          <div class="text-center text-gray-400">
+            <p>大阪府公安委員会許可 第62114R07330号</p>
+            <p>&copy; Copyright Yoshii Co., Ltd. All Rights Reserved</p>
+          </div>
+        </div>
+      </div>
+    </footer>
   </div>
 </template>
 

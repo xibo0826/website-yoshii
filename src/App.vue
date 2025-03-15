@@ -2,7 +2,7 @@
   <div id="app">
     <!-- 顶部Logo区域 -->
     <div class="bg-white h-24 md:h-28 flex items-center justify-between px-4 md:px-8">
-      <div class="flex items-center">
+      <div class="flex items-center cursor-pointer" @click="$router.push('/home')">
         <img src="@/assets/img/logo.svg" alt="" class="h-32 md:h-36" />
       </div>
       <!-- Mobile contact buttons and menu -->

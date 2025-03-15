@@ -20,39 +20,25 @@
             <!-- 買取品目 -->
             <div class="mb-16">
                 <h2 class="text-3xl font-bold mb-8">買取品目</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <!-- 建設機械 -->
-                    <router-link :to="{ name: 'used-item-detail', params: { categoryId: '1' } }" :key="'1'"
+                <!-- ローディング表示 -->
+                <div v-if="loading" class="flex justify-center items-center py-12">
+                    <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-[#2E7D32]"></div>
+                </div>
+                <!-- エラー表示 -->
+                <div v-else-if="error" class="bg-red-50 p-4 rounded-lg">
+                    <p class="text-red-600">{{ error }}</p>
+                </div>
+                <!-- 品目一覧 -->
+                <div v-else class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <router-link v-for="type in usedItemTypes" 
+                        :key="type.id"
+                        :to="{ name: 'used-item-detail', params: { categoryId: type.id.toString() } }"
                         class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                         <div class="relative h-64">
-                            <img src="@/assets/img/used-items/1-01.jpg" alt="パソコン" class="w-full h-full object-cover" />
+                            <img :src="require(`@/assets/${type.image}`)" :alt="type.name" class="w-full h-full object-cover" />
                             <div class="absolute inset-0 bg-black bg-opacity-40"></div>
                             <h3 class="absolute bottom-4 left-4 text-xl font-bold text-white">
-                                <i class="fas fa-truck-pickup mr-2"></i>パソコン
-                            </h3>
-                        </div>
-                    </router-link>
-
-                    <!-- フォークリフト -->
-                    <router-link :to="{ name: 'used-item-detail', params: { categoryId: '2' } }" :key="'2'"
-                        class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                        <div class="relative h-64">
-                            <img src="@/assets/img/used-items/1-01.jpg" alt="ゲーム機" class="w-full h-full object-cover" />
-                            <div class="absolute inset-0 bg-black bg-opacity-40"></div>
-                            <h3 class="absolute bottom-4 left-4 text-xl font-bold text-white">
-                                <i class="fas fa-forklift mr-2"></i>ゲーム機
-                            </h3>
-                        </div>
-                    </router-link>
-
-                    <!-- その他重機・機械 -->
-                    <router-link :to="{ name: 'used-item-detail', params: { categoryId: '3' } }" :key="'3'"
-                        class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                        <div class="relative h-64">
-                            <img src="@/assets/img/used-items/1-01.jpg" alt="その他重機・機械" class="w-full h-full object-cover" />
-                            <div class="absolute inset-0 bg-black bg-opacity-40"></div>
-                            <h3 class="absolute bottom-4 left-4 text-xl font-bold text-white">
-                                <i class="fas fa-cog mr-2"></i>その他重機・機械
+                                {{ type.name }}
                             </h3>
                         </div>
                     </router-link>
@@ -149,8 +135,60 @@
 </template>
 
 <script>
+import { getUsedItemTypes } from '@/api/used';
+
 export default {
-    name: 'UsedItemView'
+    name: 'UsedItemView',
+    data() {
+        return {
+            loading: true,
+            error: null,
+            usedItemTypes: [],
+            apiBaseUrl: process.env.VUE_APP_API_BASE_URL || 'http://localhost:8000'
+        };
+    },
+    computed: {
+    },
+    methods: {
+        async fetchUsedItemTypes() {
+            try {
+                this.loading = true;
+                this.error = null;
+                const response = await getUsedItemTypes();
+                console.log('API Response:', response);
+                
+                if (response && response.code === 1) {
+                    this.usedItemTypes = response.data || [];
+                    if (this.usedItemTypes.length === 0) {
+                        this.error = '買取品目が見つかりませんでした';
+                    }
+                } else {
+                    this.error = response?.message || '買取品目の取得に失敗しました';
+                    console.error('API Error Response:', response);
+                }
+            } catch (err) {
+                console.error('Fetch Error Details:', {
+                    message: err.message,
+                    response: err.response,
+                    config: err.config
+                });
+                
+                if (err.response) {
+                    this.error = `サーバーエラー: ${err.response.status} ${err.response.statusText}`;
+                } else if (err.request) {
+                    this.error = 'サーバーからの応答がありません';
+                } else {
+                    this.error = 'ネットワーク接続に問題があります';
+                }
+            } finally {
+                this.loading = false;
+            }
+        },
+    },
+    created() {
+        window.scrollTo(0, 0);
+        this.fetchUsedItemTypes();
+    }
 };
 </script>
 

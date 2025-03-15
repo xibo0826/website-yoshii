@@ -58,7 +58,7 @@
         <div v-else-if="businessError" class="bg-red-50 p-4 rounded-lg">
           <p class="text-red-600">{{ businessError }}</p>
         </div>
-        <div v-else class="grid grid-cols-2 md:grid-cols-3 gap-6">
+        <div v-else class="grid md:grid-cols-2 md:grid-cols-3 gap-6">
           <div v-for="business in businesses" :key="business.id" class="rounded-lg overflow-hidden shadow-lg group hover:shadow-xl transition-shadow duration-300">
             <img :src="require(`@/assets/${business.image}`)" class="w-full h-48 object-cover" :alt="business.name" />
             <div class="p-4 bg-white relative">
@@ -177,10 +177,15 @@ export default {
         this.newsLoading = true;
         this.newsError = null;
         const data = await getNewsList();
-        this.notices = data;
+        if (Array.isArray(data)) {
+          this.notices = data;
+        } else {
+          console.error('Invalid news data format:', data);
+          this.newsError = 'お知らせの取得に失敗しました';
+        }
       } catch (err) {
-        this.newsError = 'お知らせの取得に失敗しました';
         console.error('Failed to fetch news:', err);
+        this.newsError = err.message || 'お知らせの取得に失敗しました';
       } finally {
         this.newsLoading = false;
       }
@@ -190,16 +195,22 @@ export default {
         this.businessLoading = true;
         this.businessError = null;
         const data = await getBusinessList();
-        this.businesses = data;
+        if (Array.isArray(data)) {
+          this.businesses = data;
+        } else {
+          console.error('Invalid business data format:', data);
+          this.businessError = '事業内容の取得に失敗しました';
+        }
       } catch (err) {
-        this.businessError = '事業内容の取得に失敗しました';
         console.error('Failed to fetch businesses:', err);
+        this.businessError = err.message || '事業内容の取得に失敗しました';
       } finally {
         this.businessLoading = false;
       }
     }
   },
   created() {
+    window.scrollTo(0, 0);
     this.fetchNews();
     this.fetchBusinesses();
   }

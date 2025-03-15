@@ -28,12 +28,17 @@
                 </div>
                 <div v-else class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                     <div v-for="type in sortedScrapTypes" :key="type.id" 
-                        class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer"
-                        @click="goToDetail(type.id)">
+                        class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                         <img :src="require(`@/assets/${type.image}`)" :alt="type.name" class="w-full h-48 object-cover" />
                         <div class="p-6">
                             <h3 class="text-xl font-bold mb-4">{{ type.name }}</h3>
-                            <p class="text-gray-600">{{ type.description }}</p>
+                            <p class="text-gray-600 mb-4">{{ type.description }}</p>
+                            <div class="mt-4 pt-4 border-t border-gray-100">
+                                <button @click="goToDetail(type.id)"
+                                    class="w-full bg-[#E8F5E9] text-[#2E7D32] py-2 rounded-lg hover:bg-[#C8E6C9] transition-colors duration-300">
+                                    <i class="fas fa-search mr-2"></i>詳細商材へ
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -191,6 +196,7 @@ export default {
         }
     },
     created() {
+        window.scrollTo(0, 0);
         this.fetchScrapTypes();
     }
 };

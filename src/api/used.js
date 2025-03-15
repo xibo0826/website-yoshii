@@ -1,16 +1,16 @@
 import api from './config';
 
-export const getScrapTypes = () => {
-    return api.get('/scrapTypeList');
+export const getUsedItemTypes = () => {
+    return api.get('/usedItemTypeList');
 };
 
-export const getScrapList = (type) => {
+export const getUsedItemList = (type) => {
     return api.get('/goodList', {
         params: { type }
     });
 };
 
-export const getScrapType = (type) => {
+export const getUsedItemType = (type) => {
     return api.get('/goodType', {
         params: { type }
     });

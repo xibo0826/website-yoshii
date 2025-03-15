@@ -82,7 +82,7 @@
                                     <ul class="list-disc list-inside space-y-2">
                                         <li>スクラップ買取</li>
                                         <li>中古買取</li>
-                                        <li>骨董品買取・片付け</li>
+                                        <li>片付け・遺品整理</li>
                                         <li>出張買取</li>
                                     </ul>
                                 </td>

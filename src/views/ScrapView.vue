@@ -15,110 +15,29 @@
                 </div>
             </div>
             <div class="container mx-auto px-4 py-12">
+            <h1 class="text-4xl font-bold mb-12">スクラップ買取</h1>
+
             <!-- 買取品目 -->
-            <div class="mb-16">
+            <section class="mb-16">
                 <h2 class="text-3xl font-bold mb-8">買取品目</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <!-- 銅・真鍮・砲金系 -->
-                    <router-link :to="{ name: 'scrap-detail', params: { categoryId: '1' } }" :key="'1'"
-                        class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                        <div class="relative h-64">
-                            <img src="@/assets/img/scraps/1-01.jpg" alt="銅・真鍮・砲金" class="w-full h-full object-cover" />
-                            <div class="absolute inset-0 bg-black bg-opacity-40"></div>
-                            <h3 class="absolute bottom-4 left-4 text-xl font-bold text-white">
-                                <i class="fas fa-coins mr-2"></i>銅・真鍮・砲金系
-                            </h3>
-                        </div>
-                    </router-link>
-
-                    <!-- 電線系 -->
-                    <router-link :to="{ name: 'scrap-detail', params: { categoryId: '2' } }" :key="'2'"
-                        class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                        <div class="relative h-64">
-                            <img src="@/assets/img/scraps/2-01.jpg" alt="電線" class="w-full h-full object-cover" />
-                            <div class="absolute inset-0 bg-black bg-opacity-40"></div>
-                            <h3 class="absolute bottom-4 left-4 text-xl font-bold text-white">
-                                <i class="fas fa-bolt mr-2"></i>電線系
-                            </h3>
-                        </div>
-                    </router-link>
-
-                    <!-- アルミ・ステンレス系 -->
-                    <router-link :to="{ name: 'scrap-detail', params: { categoryId: '3' } }" :key="'3'"
-                        class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                        <div class="relative h-64">
-                            <img src="@/assets/img/scraps/3-07.jpg" alt="アルミ・ステンレス"
-                                class="w-full h-full object-cover" />
-                            <div class="absolute inset-0 bg-black bg-opacity-40"></div>
-                            <h3 class="absolute bottom-4 left-4 text-xl font-bold text-white">
-                                <i class="fas fa-layer-group mr-2"></i>アルミ・ステンレス系
-                            </h3>
-                        </div>
-                    </router-link>
-
-                    <!-- 鉛・亜鉛・バッテリー系 -->
-                    <router-link :to="{ name: 'scrap-detail', params: { categoryId: '4' } }" :key="'4'"
-                        class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                        <div class="relative h-64">
-                            <img src="@/assets/img/scraps/4-01.jpg" alt="鉛・亜鉛・バッテリー"
-                                class="w-full h-full object-cover" />
-                            <div class="absolute inset-0 bg-black bg-opacity-40"></div>
-                            <h3 class="absolute bottom-4 left-4 text-xl font-bold text-white">
-                                <i class="fas fa-car-battery mr-2"></i>鉛・亜鉛・バッテリー系
-                            </h3>
-                        </div>
-                    </router-link>
-
-                    <!-- 雑品系 -->
-                    <router-link :to="{ name: 'scrap-detail', params: { categoryId: '5' } }" :key="'5'"
-                        class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                        <div class="relative h-64">
-                            <img src="@/assets/img/scraps/5-01.jpg" alt="雑品" class="w-full h-full object-cover" />
-                            <div class="absolute inset-0 bg-black bg-opacity-40"></div>
-                            <h3 class="absolute bottom-4 left-4 text-xl font-bold text-white">
-                                <i class="fas fa-box-open mr-2"></i>雑品系
-                            </h3>
-                        </div>
-                    </router-link>
-
-                    <!-- モーター・トランス系 -->
-                    <router-link :to="{ name: 'scrap-detail', params: { categoryId: '6' } }" :key="'6'"
-                        class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                        <div class="relative h-64">
-                            <img src="@/assets/img/scraps/6-01.jpg" alt="モーター・トランス"
-                                class="w-full h-full object-cover" />
-                            <div class="absolute inset-0 bg-black bg-opacity-40"></div>
-                            <h3 class="absolute bottom-4 left-4 text-xl font-bold text-white">
-                                <i class="fas fa-cogs mr-2"></i>モーター・トランス系
-                            </h3>
-                        </div>
-                    </router-link>
-
-                    <!-- 鉄くず -->
-                    <router-link :to="{ name: 'scrap-detail', params: { categoryId: '7' } }" :key="'7'"
-                        class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                        <div class="relative h-64">
-                            <img src="@/assets/img/scraps/7-01.jpg" alt="鉄くず" class="w-full h-full object-cover" />
-                            <div class="absolute inset-0 bg-black bg-opacity-40"></div>
-                            <h3 class="absolute bottom-4 left-4 text-xl font-bold text-white">
-                                <i class="fas fa-industry mr-2"></i>鉄くず
-                            </h3>
-                        </div>
-                    </router-link>
-
-                    <!-- PC・基板系 -->
-                    <router-link :to="{ name: 'scrap-detail', params: { categoryId: '8' } }" :key="'8'"
-                        class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                        <div class="relative h-64">
-                            <img src="@/assets/img/scraps/8-01.jpg" alt="PC・基板" class="w-full h-full object-cover" />
-                            <div class="absolute inset-0 bg-black bg-opacity-40"></div>
-                            <h3 class="absolute bottom-4 left-4 text-xl font-bold text-white">
-                                <i class="fas fa-microchip mr-2"></i>PC・基板系
-                            </h3>
-                        </div>
-                    </router-link>
+                <div v-if="loading" class="flex justify-center items-center py-12">
+                    <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-[#2E7D32]"></div>
                 </div>
-            </div>
+                <div v-else-if="error" class="bg-red-50 p-4 rounded-lg">
+                    <p class="text-red-600">{{ error }}</p>
+                </div>
+                <div v-else class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div v-for="type in sortedScrapTypes" :key="type.id" 
+                        class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer"
+                        @click="goToDetail(type.id)">
+                        <img :src="require(`@/assets/${type.image}`)" :alt="type.name" class="w-full h-48 object-cover" />
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-4">{{ type.name }}</h3>
+                            <p class="text-gray-600">{{ type.description }}</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             <!-- 買取の流れ -->
             <div class="mb-16">
@@ -214,8 +133,66 @@
 </template>
 
 <script>
+import { getScrapTypes } from '@/api/scrap';
+
 export default {
-    name: 'ScrapView'
+    name: 'ScrapView',
+    data() {
+        return {
+            loading: true,
+            error: null,
+            scrapTypes: []
+        };
+    },
+    computed: {
+        sortedScrapTypes() {
+            return [...this.scrapTypes].sort((a, b) => a.sort - b.sort);
+        }
+    },
+    methods: {
+        async fetchScrapTypes() {
+            try {
+                this.loading = true;
+                this.error = null;
+                const response = await getScrapTypes();
+                console.log('API Response:', response);
+                if (response && response.code === 1) {
+                    this.scrapTypes = response.data || [];
+                    if (this.scrapTypes.length === 0) {
+                        this.error = '買取品目が見つかりませんでした';
+                    }
+                } else {
+                    this.error = response?.message || '買取品目の取得に失敗しました';
+                    console.error('API Error Response:', response);
+                }
+            } catch (err) {
+                console.error('Fetch Error Details:', {
+                    message: err.message,
+                    response: err.response,
+                    config: err.config
+                });
+                
+                if (err.response) {
+                    this.error = `サーバーエラー: ${err.response.status} ${err.response.statusText}`;
+                } else if (err.request) {
+                    this.error = 'サーバーからの応答がありません';
+                } else {
+                    this.error = 'ネットワーク接続に問題があります';
+                }
+            } finally {
+                this.loading = false;
+            }
+        },
+        goToDetail(categoryId) {
+            this.$router.push({
+                name: 'scrap-detail',
+                params: { categoryId: categoryId.toString() }
+            });
+        }
+    },
+    created() {
+        this.fetchScrapTypes();
+    }
 };
 </script>
 

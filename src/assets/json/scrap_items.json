@@ -1,0 +1,410 @@
+[
+    {
+        "name": "エアコンの真鍮",
+        "unit": "kg",
+        "price": "550",
+        "description": "",
+        "image": "img/scraps/1-01.jpg",
+        "type": "1"
+    },
+    {
+        "name": "エアコンパイプ",
+        "unit": "kg",
+        "price": "650",
+        "description": "エアコンの設置の際に使用される被覆銅管が主な買取対象となります。（真鍮付きも買い取り可）",
+        "image": "img/scraps/1-02.jpg",
+        "type": "1"
+    },
+    {
+        "name": "ピカ銅",
+        "unit": "kg",
+        "price": "1450",
+        "description": "単線の断面直径が基本1.6mm以上の銅線で、付き物・表面劣化（変色）・メッキ・エナメル・汚れ・塗装等がないもの",
+        "image": "img/scraps/1-03.jpg",
+        "type": "1"
+    },
+    {
+        "name": "プラ付き真鍮",
+        "unit": "kg",
+        "price": "750",
+        "description": "",
+        "image": "img/scraps/1-04.jpg",
+        "type": "1"
+    },
+    {
+        "name": "下銅",
+        "unit": "kg",
+        "price": "1100",
+        "description": "",
+        "image": "img/scraps/1-05.jpg",
+        "type": "1"
+    },
+    {
+        "name": "並銅",
+        "unit": "kg",
+        "price": "1390",
+        "description": "",
+        "image": "img/scraps/1-06.jpg",
+        "type": "1"
+    },
+    {
+        "name": "真鍮",
+        "unit": "kg",
+        "price": "950",
+        "description": "",
+        "image": "img/scraps/1-07.jpg",
+        "type": "1"
+    },
+    {
+        "name": "砲金",
+        "unit": "kg",
+        "price": "1100",
+        "description": "",
+        "image": "img/scraps/1-08.jpg",
+        "type": "1"
+    },
+    {
+        "name": "込銅",
+        "unit": "kg",
+        "price": "1350",
+        "description": "一号銅と同じく銅管等の汚れや塗装がないもので青錆やメッキ、エナメル、溶接部分、少量の真鍮の付き物等あるもの",
+        "image": "img/scraps/1-09.jpg",
+        "type": "1"
+    },
+    {
+        "name": "VA線(VVFケーブル)",
+        "unit": "kg",
+        "price": "585",
+        "description": "エアコンや照明等の配線に使用されるVVFケーブルでコネクタ除去済みのものが買取対象となります。",
+        "image": "img/scraps/2-01.jpg",
+        "type": "2"
+    },
+    {
+        "name": "一本線(銅率80%以上)",
+        "unit": "kg",
+        "price": "1110",
+        "description": "単線の断面直径1.3mm以上及び銅率80％以上の被覆付き銅線が買取対象となります。",
+        "image": "img/scraps/2-02.jpg",
+        "type": "2"
+    },
+    {
+        "name": "三本線(銅率65%以上)",
+        "unit": "kg",
+        "price": "760",
+        "description": "単線の断面直径1.3mm以上及び銅率60％以上の被覆付き銅線が買取対象となります。",
+        "image": "img/scraps/2-03.jpg",
+        "type": "2"
+    },
+    {
+        "name": "雑線(家電線)",
+        "unit": "kg",
+        "price": "390",
+        "description": "主に家電製品に使用されている電線でコネクタ除去済みのものが買取対象となります。",
+        "image": "img/scraps/2-04.jpg",
+        "type": "2"
+    },
+    {
+        "name": "アルミガラA(付物なし)",
+        "unit": "kg",
+        "price": "240",
+        "description": "アルミ製のフライパンや鍋（持ち手付き含む）、梯子、脚立等が買取対象となります。",
+        "image": "img/scraps/3-01.jpg",
+        "type": "3"
+    },
+    {
+        "name": "アルミガラB(付物あり)",
+        "unit": "kg",
+        "price": "170",
+        "description": "アルミサッシ（アルミの窓枠等に用いる建材）少量の付き物がついているサッシが買取対象となります。",
+        "image": "img/scraps/3-02.jpg",
+        "type": "3"
+    },
+    {
+        "name": "アルミサッシA(付物なし)",
+        "unit": "kg",
+        "price": "300",
+        "description": "",
+        "image": "img/scraps/3-03.jpg",
+        "type": "3"
+    },
+    {
+        "name": "アルミサッシB(付物あり）",
+        "unit": "kg",
+        "price": "270",
+        "description": "",
+        "image": "img/scraps/3-04.jpg",
+        "type": "3"
+    },
+    {
+        "name": "アルミホイール",
+        "unit": "kg",
+        "price": "330",
+        "description": "自動車用のアルミホイールが買取対象となります。",
+        "image": "img/scraps/3-05.jpg",
+        "type": "3"
+    },
+    {
+        "name": "アルミラジエター",
+        "unit": "kg",
+        "price": "50",
+        "description": "フィンとチューブがアルミのものが買取対象となります。",
+        "image": "img/scraps/3-06.jpg",
+        "type": "3"
+    },
+    {
+        "name": "アルミ缶",
+        "unit": "kg",
+        "price": "262",
+        "description": "",
+        "image": "img/scraps/3-07.jpg",
+        "type": "3"
+    },
+    {
+        "name": "ステンレス",
+        "unit": "kg",
+        "price": "180",
+        "description": "",
+        "image": "img/scraps/3-08.jpg",
+        "type": "3"
+    },
+    {
+        "name": "ホイール付きタイヤ・大",
+        "unit": "本",
+        "price": "2200",
+        "description": "15インチ以上",
+        "image": "img/scraps/3-09.jpg",
+        "type": "3"
+    },
+    {
+        "name": "ホイール付きタイヤ・小",
+        "unit": "本",
+        "price": "1200",
+        "description": "13インチ以下",
+        "image": "img/scraps/3-10.jpg",
+        "type": "3"
+    },
+    {
+        "name": "バッテリーA",
+        "unit": "kg",
+        "price": "110",
+        "description": "",
+        "image": "img/scraps/4-01.jpg",
+        "type": "4"
+    },
+    {
+        "name": "バッテリーB",
+        "unit": "kg",
+        "price": "60",
+        "description": "",
+        "image": "img/scraps/4-02.jpg",
+        "type": "4"
+    },
+    {
+        "name": "亜鉛",
+        "unit": "kg",
+        "price": "130",
+        "description": "",
+        "image": "img/scraps/4-03.jpg",
+        "type": "4"
+    },
+    {
+        "name": "鉛",
+        "unit": "kg",
+        "price": "100",
+        "description": "鉛管、鉛板が買取対象となります。",
+        "image": "img/scraps/4-04.jpg",
+        "type": "4"
+    },
+    {
+        "name": "エアコンラジエター",
+        "unit": "kg",
+        "price": "680",
+        "description": "銅管が使用されているものが買取対象となります。",
+        "image": "img/scraps/5-01.jpg",
+        "type": "5"
+    },
+    {
+        "name": "ガスメーター",
+        "unit": "kg",
+        "price": "60",
+        "description": "ガス消費量を測る計量器（アルミ製）が買取対象となります。",
+        "image": "img/scraps/5-02.jpg",
+        "type": "5"
+    },
+    {
+        "name": "ガス給湯器",
+        "unit": "kg",
+        "price": "280",
+        "description": "主にガス給湯器が買取対象となります。",
+        "image": "img/scraps/5-03.jpg",
+        "type": "5"
+    },
+    {
+        "name": "ブレーカー",
+        "unit": "kg",
+        "price": "100",
+        "description": "",
+        "image": "img/scraps/5-04.jpg",
+        "type": "5"
+    },
+    {
+        "name": "工業雑品",
+        "unit": "kg",
+        "price": "0",
+        "description": "",
+        "image": "img/scraps/5-05.jpg",
+        "type": "5"
+    },
+    {
+        "name": "手動工具",
+        "unit": "kg",
+        "price": "200",
+        "description": "",
+        "image": "img/scraps/5-06.jpg",
+        "type": "5"
+    },
+    {
+        "name": "業務用エアコン",
+        "unit": "kg",
+        "price": "180",
+        "description": "",
+        "image": "img/scraps/5-07.jpg",
+        "type": "5"
+    },
+    {
+        "name": "電動工具",
+        "unit": "kg",
+        "price": "150",
+        "description": "",
+        "image": "img/scraps/5-08.jpg",
+        "type": "5"
+    },
+    {
+        "name": "コンプレッサーモーター",
+        "unit": "kg",
+        "price": "100",
+        "description": "",
+        "image": "img/scraps/6-01.jpg",
+        "type": "6"
+    },
+    {
+        "name": "セル・ダイナモ",
+        "unit": "kg",
+        "price": "180",
+        "description": "",
+        "image": "img/scraps/6-02.jpg",
+        "type": "6"
+    },
+    {
+        "name": "トランス",
+        "unit": "kg",
+        "price": "120",
+        "description": "",
+        "image": "img/scraps/6-03.jpg",
+        "type": "6"
+    },
+    {
+        "name": "トランスコア小",
+        "unit": "kg",
+        "price": "230",
+        "description": "変圧器（トランス）の中にある鉄心に銅コイルが巻き付けてあるトランスコアが買取対象となります。",
+        "image": "img/scraps/6-04.jpg",
+        "type": "6"
+    },
+    {
+        "name": "銅トランスコア",
+        "unit": "kg",
+        "price": "200",
+        "description": "",
+        "image": "img/scraps/6-05.jpg",
+        "type": "6"
+    },
+    {
+        "name": "黒モーター",
+        "unit": "kg",
+        "price": "120",
+        "description": "",
+        "image": "img/scraps/6-06.jpg",
+        "type": "6"
+    },
+    {
+        "name": "鉄A",
+        "unit": "kg",
+        "price": "52",
+        "description": "",
+        "image": "img/scraps/7-01.jpg",
+        "type": "7"
+    },
+    {
+        "name": "鉄B",
+        "unit": "kg",
+        "price": "50",
+        "description": "",
+        "image": "img/scraps/7-02.jpg",
+        "type": "7"
+    },
+    {
+        "name": "鉄C",
+        "unit": "kg",
+        "price": "38",
+        "description": "",
+        "image": "img/scraps/7-03.jpg",
+        "type": "7"
+    },
+    {
+        "name": "鉄板",
+        "unit": "kg",
+        "price": "70",
+        "description": "",
+        "image": "img/scraps/7-04.jpg",
+        "type": "7"
+    },
+    {
+        "name": "CPU",
+        "unit": "kg",
+        "price": "1500",
+        "description": "",
+        "image": "img/scraps/8-01.jpg",
+        "type": "8"
+    },
+    {
+        "name": "ハードディスク（HDD)",
+        "unit": "kg",
+        "price": "300",
+        "description": "",
+        "image": "img/scraps/8-02.jpg",
+        "type": "8"
+    },
+    {
+        "name": "パソコン基板",
+        "unit": "kg",
+        "price": "1600",
+        "description": "",
+        "image": "img/scraps/8-03.jpg",
+        "type": "8"
+    },
+    {
+        "name": "パソコン本体",
+        "unit": "kg",
+        "price": "1200",
+        "description": "",
+        "image": "img/scraps/8-04.jpg",
+        "type": "8"
+    },
+    {
+        "name": "メモリー",
+        "unit": "kg",
+        "price": "3000",
+        "description": "",
+        "image": "img/scraps/8-05.jpg",
+        "type": "8"
+    },
+    {
+        "name": "家電基板",
+        "unit": "kg",
+        "price": "220",
+        "description": "",
+        "image": "img/scraps/8-06.jpg",
+        "type": "8"
+    }
+]

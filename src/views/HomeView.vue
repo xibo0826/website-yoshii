@@ -18,39 +18,61 @@
       </swiper>
     </div>
     <div class="container mx-auto px-4 py-12">
-      <!-- 新着情报 -->
+      <!-- 新着情報 -->
       <div class="mb-16">
         <div class="flex items-center justify-between mb-12">
-          <h2 class="text-3xl font-bold">新着情报</h2>
+          <h2 class="text-3xl font-bold">新着情報</h2>
           <router-link to="/news" class="flex items-center text-[#81C784] hover:text-[#2E7D32] transition-colors duration-300">
             <span class="mr-2">More</span>
             <i class="fas fa-chevron-right text-sm"></i>
           </router-link>
         </div>
-        <div class="bg-white rounded-lg shadow-lg p-6 border border-gray-100">
+        <div v-if="newsLoading" class="flex justify-center items-center py-12">
+          <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-[#2E7D32]"></div>
+        </div>
+        <div v-else-if="newsError" class="bg-red-50 p-4 rounded-lg">
+          <p class="text-red-600">{{ newsError }}</p>
+        </div>
+        <div v-else class="bg-white rounded-lg shadow-lg p-6 border border-gray-100">
           <div class="space-y-6">
-            <div v-for="(notice, index) in notices" :key="index" class="pb-4 border-b border-gray-200 last:border-b-0 hover:bg-gray-50 p-4 rounded-lg transition-colors duration-200">
+            <div v-for="notice in latestNotices" :key="notice.id" class="pb-4 border-b border-gray-200 last:border-b-0 hover:bg-gray-50 p-4 rounded-lg transition-colors duration-200">
               <div class="flex items-center mb-2">
-                <span class="text-[#81C784] font-semibold">{{ notice.date }}</span>
+                <span class="text-[#81C784] font-semibold">{{ formatDate(notice.date) }}</span>
                 <span class="mx-4 text-gray-300">|</span>
                 <span class="bg-[#E8F5E9] text-[#2E7D32] px-3 py-1 rounded-full text-sm">{{ notice.category }}</span>
               </div>
               <h3 class="text-lg font-semibold mb-2">{{ notice.title }}</h3>
-              <p class="text-gray-600">{{ notice.content }}</p>
+              <p class="text-gray-600" v-html="notice.content"></p>
             </div>
           </div>
         </div>
       </div>
-      <!-- 回收品类 -->
+      <!-- 事業内容 -->
       <div class="mb-16">
         <div class="flex items-center justify-between mb-12">
           <h2 class="text-3xl font-bold">事業内容</h2>
         </div>
-        <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
-          <div v-for="(category, index) in categories" :key="index" class="rounded-lg overflow-hidden shadow-lg">
-            <img :src="category.image" class="w-full h-48 object-cover" :alt="category.name" />
-            <div class="p-4 bg-white">
-              <h3 class="text-lg font-semibold">{{ category.name }}</h3>
+        <div v-if="businessLoading" class="flex justify-center items-center py-12">
+          <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-[#2E7D32]"></div>
+        </div>
+        <div v-else-if="businessError" class="bg-red-50 p-4 rounded-lg">
+          <p class="text-red-600">{{ businessError }}</p>
+        </div>
+        <div v-else class="grid grid-cols-2 md:grid-cols-3 gap-6">
+          <div v-for="business in businesses" :key="business.id" class="rounded-lg overflow-hidden shadow-lg group hover:shadow-xl transition-shadow duration-300">
+            <img :src="require(`@/assets/${business.image}`)" class="w-full h-48 object-cover" :alt="business.name" />
+            <div class="p-4 bg-white relative">
+              <div class="flex justify-between items-center mb-2">
+                <h3 class="text-lg font-semibold">{{ business.name }}</h3>
+                <router-link 
+                  :to="getBusinessRoute(business.name)"
+                  class="text-[#81C784] hover:text-[#2E7D32] transition-colors duration-300 flex items-center"
+                >
+                  <span class="mr-2">詳細</span>
+                  <i class="fas fa-chevron-right text-sm"></i>
+                </router-link>
+              </div>
+              <p v-if="business.remark" class="text-gray-600 mt-2">{{ business.remark }}</p>
             </div>
           </div>
         </div>
@@ -79,6 +101,8 @@
 </template>
 <script>
 import { Swiper, SwiperSlide } from 'vue-awesome-swiper';
+import { getNewsList } from '@/api/news';
+import { getBusinessList } from '@/api/business';
 import 'swiper/css/swiper.css';
 
 export default {
@@ -87,32 +111,14 @@ export default {
     Swiper,
     SwiperSlide
   },
-  mounted() {
-  },
-  methods: {
-  },
   data() {
     return {
-      notices: [
-        {
-          date: '2023-12-28',
-          category: 'お知らせ',
-          title: '年末年始の営業時間について',
-          content: '平素は格別のご高配を賜り、誠にありがとうございます。\n年末年始の営業時間を下記の通りとさせていただきます：\n\n12月30日～1月3日：休業\n1月4日より通常営業\n\n緊急の場合は携帯電話にてご連絡ください。\nご不便をおかけいたしますが、何卒ご理解賜りますようお願い申し上げます。'
-        },
-        {
-          date: '2023-12-20',
-          category: 'キャンペーン',
-          title: '年末大掃除応援キャンペーン実施中',
-          content: '年末の大掃除に合わせて、不用品回収の特別キャンペーンを実施いたします。\n\n期間：12月20日～12月29日\n特典：\n・回収料金20%OFF\n・複数個所の回収で追加10%OFF\n・見積り無料\n・即日対応可能\n\nこの機会に是非ご利用ください。'
-        },
-        {
-          date: '2023-12-15',
-          category: '新サービス',
-          title: '法人向け定期回収サービス開始のお知らせ',
-          content: '法人のお客様向けに、定期回収サービスを開始いたしました。\n\n主なサービス内容：\n・毎月定期的な回収\n・回収スケジュールのカスタマイズ\n・専用の回収ボックス提供\n・電子マニフェスト対応\n・優先対応\n\n詳細は営業担当までお問い合わせください。',
-        },
-      ],
+      newsLoading: true,
+      newsError: null,
+      notices: [],
+      businessLoading: true,
+      businessError: null,
+      businesses: [],
       swiperOption: {
         loop: true,
         autoplay: {
@@ -141,25 +147,61 @@ export default {
           description: '経験豊富なスタッフが丁寧に対応いたします'
         }
       ],
-      categories: [
-        {
-          name: 'スクラップ買取',
-          image: require('@/assets/img/category1.jpg')
-        },
-        {
-          name: '中古買取',
-          image: require('@/assets/img/category2.jpg')
-        },
-        {
-          name: '出張買取',
-          image: require('@/assets/img/category4.jpg')
-        },
-        {
-          name: '片付け・遺品整理',
-          image: require('@/assets/img/category3.jpg')
-        },
-      ]
     };
+  },
+  computed: {
+    latestNotices() {
+      return this.notices.slice(0, 3);
+    }
+  },
+  methods: {
+    formatDate(dateString) {
+      const date = new Date(dateString);
+      return date.toLocaleDateString('ja-JP', {
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit'
+      }).replace(/\//g, '-');
+    },
+    getBusinessRoute(name) {
+      const routeMap = {
+        'スクラップ買取': '/scrap',
+        '中古買取': '/used',
+        '出張買取': '/visit',
+        '片付け・遺品整理': '/tidying'
+      };
+      return routeMap[name] || '/';
+    },
+    async fetchNews() {
+      try {
+        this.newsLoading = true;
+        this.newsError = null;
+        const data = await getNewsList();
+        this.notices = data;
+      } catch (err) {
+        this.newsError = 'お知らせの取得に失敗しました';
+        console.error('Failed to fetch news:', err);
+      } finally {
+        this.newsLoading = false;
+      }
+    },
+    async fetchBusinesses() {
+      try {
+        this.businessLoading = true;
+        this.businessError = null;
+        const data = await getBusinessList();
+        this.businesses = data;
+      } catch (err) {
+        this.businessError = '事業内容の取得に失敗しました';
+        console.error('Failed to fetch businesses:', err);
+      } finally {
+        this.businessLoading = false;
+      }
+    }
+  },
+  created() {
+    this.fetchNews();
+    this.fetchBusinesses();
   }
 };
 </script>

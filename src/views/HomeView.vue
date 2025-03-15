@@ -22,14 +22,14 @@
       <div class="mb-16">
         <div class="flex items-center justify-between mb-12">
           <h2 class="text-3xl font-bold">新着情报</h2>
-          <a href="#" class="flex items-center text-[#81C784] hover:text-[#2E7D32] transition-colors duration-300">
-            <span class="mr-2">更多</span>
+          <router-link to="/news" class="flex items-center text-[#81C784] hover:text-[#2E7D32] transition-colors duration-300">
+            <span class="mr-2">More</span>
             <i class="fas fa-chevron-right text-sm"></i>
-          </a>
+          </router-link>
         </div>
-        <div class="bg-white rounded-lg shadow-lg p-6">
+        <div class="bg-white rounded-lg shadow-lg p-6 border border-gray-100">
           <div class="space-y-6">
-            <div v-for="(notice, index) in notices" :key="index" class="pb-4 border-b border-gray-200 last:border-b-0">
+            <div v-for="(notice, index) in notices" :key="index" class="pb-4 border-b border-gray-200 last:border-b-0 hover:bg-gray-50 p-4 rounded-lg transition-colors duration-200">
               <div class="flex items-center mb-2">
                 <span class="text-[#81C784] font-semibold">{{ notice.date }}</span>
                 <span class="mx-4 text-gray-300">|</span>
@@ -95,23 +95,23 @@ export default {
     return {
       notices: [
         {
-          date: '2024-01-15',
-          category: '服务通知',
-          title: '春节期间回收服务时间调整公告',
-          content: '尊敬的客户，为了更好地服务于您，我司春节期间（2024年2月9日至2月17日）将实行特殊工作时间。详情请致电咨询。'
+          date: '2023-12-28',
+          category: 'お知らせ',
+          title: '年末年始の営業時間について',
+          content: '平素は格別のご高配を賜り、誠にありがとうございます。\n年末年始の営業時間を下記の通りとさせていただきます：\n\n12月30日～1月3日：休業\n1月4日より通常営業\n\n緊急の場合は携帯電話にてご連絡ください。\nご不便をおかけいたしますが、何卒ご理解賜りますようお願い申し上げます。'
         },
         {
-          date: '2024-01-10',
-          category: '价格公告',
-          title: '1月废旧金属回收价格调整通知',
-          content: '因市场行情变动，本月起部分废旧金属回收价格将进行适当调整，具体价格以现场评估为准。'
+          date: '2023-12-20',
+          category: 'キャンペーン',
+          title: '年末大掃除応援キャンペーン実施中',
+          content: '年末の大掃除に合わせて、不用品回収の特別キャンペーンを実施いたします。\n\n期間：12月20日～12月29日\n特典：\n・回収料金20%OFF\n・複数個所の回収で追加10%OFF\n・見積り無料\n・即日対応可能\n\nこの機会に是非ご利用ください。'
         },
         {
-          date: '2024-01-05',
-          category: '活动公告',
-          title: '大型企业年度设备更新回收优惠活动',
-          content: '即日起至2024年3月31日，针对大型企业的整体设备更新项目，推出专属优惠方案。'
-        }
+          date: '2023-12-15',
+          category: '新サービス',
+          title: '法人向け定期回収サービス開始のお知らせ',
+          content: '法人のお客様向けに、定期回収サービスを開始いたしました。\n\n主なサービス内容：\n・毎月定期的な回収\n・回収スケジュールのカスタマイズ\n・専用の回収ボックス提供\n・電子マニフェスト対応\n・優先対応\n\n詳細は営業担当までお問い合わせください。',
+        },
       ],
       swiperOption: {
         loop: true,
@@ -151,13 +151,13 @@ export default {
           image: require('@/assets/img/category2.jpg')
         },
         {
-          name: '骨董品買取・片付け',
-          image: require('@/assets/img/category3.jpg')
-        },
-        {
           name: '出張買取',
           image: require('@/assets/img/category4.jpg')
-        }
+        },
+        {
+          name: '片付け・遺品整理',
+          image: require('@/assets/img/category3.jpg')
+        },
       ]
     };
   }

@@ -36,8 +36,8 @@
       <!-- Desktop contact info -->
       <div class="hidden md:block text-right">
         <div class="flex items-center justify-end">
-          <i class="fas fa-phone-alt text-gray-800 mr-2"></i>
-          <span class="text-2xl font-bold text-gray-800">07-2160-6917</span>
+          <i class="fas fa-phone-alt text-[#2E7D32] mr-2"></i>
+          <span class="text-2xl font-bold text-[#2E7D32]">07-2160-6917</span>
         </div>
         <div class="text-gray-600">営業時間：8:00-18:00</div>
         <div class="text-gray-600">メール：yoshiishirakawa1013@gmail.com</div>
@@ -132,8 +132,8 @@ export default {
         { name: 'スクラップ買取', path: '/scrap' },
         { name: '中古買取', path: '/used' },
         { name: '出張買取', path: '/visit' },
-        { name: '骨董品買取・片付け', path: '/antique' },
-        { name: '会社案内', path: '/guide' },
+        // { name: '骨董品買取', path: '/antique' },
+        { name: '片付け・遺品整理', path: '/tidying' },
         { name: '新着情報', path: '/news' }
       ]
     };

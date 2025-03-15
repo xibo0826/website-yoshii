@@ -173,7 +173,45 @@ const categoryData = {
             { name: 'エアコンラジエター', unit: 'kg', price: '￥680円/kg（税込）', note: '銅管が使用されているものが買取対象となります。', image: require('../assets/img/scraps/5-01.jpg') },
             { name: 'ガスメーター', unit: 'kg', price: '￥60円/kg（税込）', note: 'ガス消費量を測る計量器（アルミ製）が買取対象となります。', image: require('../assets/img/scraps/5-02.jpg') },
             { name: 'ガス給湯器', unit: 'kg', price: '￥280円/kg（税込）', note: '主にガス給湯器が買取対象となります。', image: require('../assets/img/scraps/5-03.jpg') },
-            { name: 'ブレーカー', unit: 'kg', price: '￥100円/kg（税込）', note: '', image: require('../assets/img/scraps/5-04.jpg') }
+            { name: 'ブレーカー', unit: 'kg', price: '￥100円/kg（税込）', note: '', image: require('../assets/img/scraps/5-04.jpg') },
+            { name: '工業雑品', unit: 'kg', price: '￥0円/kg（税込）', note: '', image: require('../assets/img/scraps/5-05.jpg') },
+            { name: '手動工具', unit: 'kg', price: '￥200円/kg（税込）', note: '', image: require('../assets/img/scraps/5-06.jpg') },
+            { name: '業務用エアコン', unit: 'kg', price: '￥180円/kg（税込）', note: '', image: require('../assets/img/scraps/5-07.jpg') },
+            { name: '電動工具', unit: 'kg', price: '￥150円/kg（税込）', note: '', image: require('../assets/img/scraps/5-08.jpg') }
+        ]
+    },
+    'type6': {
+        name: 'モーター・トランス系',
+        description: '各種モーター、トランス、コンプレッサーなどの電気機器を買取いたします。',
+        items: [
+            { name: 'コンプレッサーモーター', unit: 'kg', price: '￥100円/kg（税込）', note: '', image: require('../assets/img/scraps/6-01.jpg') },
+            { name: 'セル・ダイナモ', unit: 'kg', price: '￥180円/kg（税込）', note: '', image: require('../assets/img/scraps/6-02.jpg') },
+            { name: 'トランス', unit: 'kg', price: '￥120円/kg（税込）', note: '', image: require('../assets/img/scraps/6-03.jpg') },
+            { name: 'トランスコア小', unit: 'kg', price: '￥230円/kg（税込）', note: '変圧器（トランス）の中にある鉄心に銅コイルが巻き付けてあるトランスコアが買取対象となります。', image: require('../assets/img/scraps/6-04.jpg') },
+            { name: '銅トランスコア', unit: 'kg', price: '￥200円/kg（税込）', note: '', image: require('../assets/img/scraps/6-05.jpg') },
+            { name: '黒モーター', unit: 'kg', price: '￥120円/kg（税込）', note: '', image: require('../assets/img/scraps/6-06.jpg') }
+        ]
+    },
+    'type7': {
+        name: '鉄くず',
+        description: '鉄スクラップの種類や品質に応じて適切な価格で買取いたします。',
+        items: [
+            { name: '鉄A', unit: 'kg', price: '￥52円/kg（税込）', note: '', image: require('../assets/img/scraps/7-01.jpg') },
+            { name: '鉄B', unit: 'kg', price: '￥50円/kg（税込）', note: '', image: require('../assets/img/scraps/7-02.jpg') },
+            { name: '鉄C', unit: 'kg', price: '￥38円/kg（税込）', note: '', image: require('../assets/img/scraps/7-03.jpg') },
+            { name: '鉄板', unit: 'kg', price: '￥70円/kg（税込）', note: '', image: require('../assets/img/scraps/7-04.jpg') }
+        ]
+    },
+    'type8': {
+        name: 'PC・基板系',
+        description: 'パソコンや電子基板など、電子機器の買取を行っています。データの完全消去にも対応いたします。',
+        items: [
+            { name: 'CPU', unit: 'kg', price: '￥1,500円/kg（税込）', note: '', image: require('../assets/img/scraps/8-01.jpg') },
+            { name: 'ハードディスク（HDD)', unit: 'kg', price: '￥300円/kg（税込）', note: '', image: require('../assets/img/scraps/8-02.jpg') },
+            { name: 'パソコン基板', unit: 'kg', price: '￥1,600円/kg（税込）', note: '', image: require('../assets/img/scraps/8-03.jpg') },
+            { name: 'パソコン本体', unit: 'kg', price: '￥1,200円/kg（税込）', note: '', image: require('../assets/img/scraps/8-04.jpg') },
+            { name: 'メモリー', unit: 'kg', price: '￥3,000円/kg（税込）', note: '', image: require('../assets/img/scraps/8-05.jpg') },
+            { name: '家電基板', unit: 'kg', price: '￥220円/kg（税込）', note: '', image: require('../assets/img/scraps/8-06.jpg') }
         ]
     }
 };
@@ -195,6 +233,7 @@ export default {
     },
     created() {
         console.log(this.$route.params.categoryId);
+        window.scrollTo(0, 0);
     },
     methods: {
         loadCategoryData() {

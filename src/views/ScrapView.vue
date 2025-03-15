@@ -1,8 +1,8 @@
 <template>
     <div class="min-h-screen bg-gray-50">
-        <div class="container mx-auto px-4 py-12">
+        
             <!-- ヘッダーセクション -->
-            <div class="relative h-[400px] mb-16 rounded-lg overflow-hidden">
+            <div class="relative h-[400px] md:h-[600px] mb-16 overflow-hidden">
                 <img src="@/assets/img/category1.jpg" alt="スクラップ買取" class="w-full h-full object-cover" />
                 <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center">
                     <div class="container mx-auto px-8">
@@ -14,7 +14,7 @@
                     </div>
                 </div>
             </div>
-
+            <div class="container mx-auto px-4 py-12">
             <!-- 買取品目 -->
             <div class="mb-16">
                 <h2 class="text-3xl font-bold mb-8">買取品目</h2>
@@ -168,7 +168,7 @@
                     <ul class="space-y-4 text-gray-600">
                         <li class="flex items-start">
                             <i class="fas fa-exclamation-circle text-[#2E7D32] mt-1 mr-3"></i>
-                            <span>相場により価格が変動する場合がございます。詳しくはお問い合わせください。</span>
+                            <span>相場により価格が変動する場合がございます。実際の買取価格は、ホームページの表記と異なる場合がありますのでご注意ください。</span>
                         </li>
                         <li class="flex items-start">
                             <i class="fas fa-exclamation-circle text-[#2E7D32] mt-1 mr-3"></i>

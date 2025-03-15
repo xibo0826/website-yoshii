@@ -21,7 +21,9 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
-        run: npm ci
+        run: |
+          npm install
+          npm install axios@1.8.3 --save-exact
 
       - name: Build project
         run: npm run build

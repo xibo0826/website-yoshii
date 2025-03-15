@@ -41,7 +41,7 @@
                     <div class="flex flex-col md:flex-row h-[500px]">
                         <!-- 图片 -->
                         <div class="w-full md:w-1/2 relative p-4">
-                            <div class="relative rounded-lg overflow-hidden h-48 md:h-full">
+                            <div class="relative rounded-lg overflow-hidden h-48 md:h-full"> 
                                 <img :src="require(`@/assets/${selectedItem.image}`)" :alt="selectedItem.name" class="w-full h-full object-cover" @error="handleImageError">
                                 <div class="absolute inset-0 bg-black bg-opacity-20"></div>
                             </div>

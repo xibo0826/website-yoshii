@@ -1,0 +1,63 @@
+name: Deploy to Production
+
+on:
+  push:
+    branches:
+      - main  # 设置要触发部署的分支
+  workflow_dispatch: # 允许手动触发部署
+
+jobs:
+  build-and-deploy:
+    runs-on: centos-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build project
+        run: npm run build
+        env:
+          NODE_ENV: production
+
+      - name: Deploy to Production Server
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.SERVER1_HOST }}
+          username: ${{ secrets.SERVER1_USER }}
+          password: ${{ secrets.SERVER1_PWD }}
+          source: "dist/*"
+          target: "/www/website/yoshii_new/temp"
+          strip_components: 1
+
+      - name: Execute deployment commands
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SERVER1_HOST }}
+          username: ${{ secrets.SERVER1_USER }}
+          password: ${{ secrets.SERVER1_PWD }}
+          script: |
+            # 备份当前版本
+            if [ -d "/www/website/yoshii_new/current" ]; then
+              timestamp=$(date +%Y%m%d_%H%M%S)
+              mv /www/website/yoshii_new/current /www/website/yoshii_new/backup_${timestamp}
+            fi
+            
+            # 部署新版本
+            mv /www/website/yoshii_new/temp /www/website/yoshii_new/current
+            
+            # 清理旧的备份（保留最近5个版本）
+            cd /www/website/yoshii_new
+            ls -dt backup_* | tail -n +6 | xargs -r rm -rf
+            
+            # 设置权限
+            chown -R www:www /www/website/yoshii_new/current
+            chmod -R 755 /www/website/yoshii_new/current 

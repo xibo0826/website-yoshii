@@ -36,10 +36,16 @@
                         class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                         <div class="relative h-64">
                             <img :src="require(`@/assets/${type.image}`)" :alt="type.name" class="w-full h-full object-cover" />
-                            <div class="absolute inset-0 bg-black bg-opacity-40"></div>
-                            <h3 class="absolute bottom-4 left-4 text-xl font-bold text-white">
-                                {{ type.name }}
-                            </h3>
+                            <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-end p-4">
+                                <div class="flex justify-between items-center">
+                                    <h3 class="text-xl font-bold text-white">
+                                        {{ type.name }}
+                                    </h3>
+                                    <span class="text-[#81C784] hover:text-[#A5D6A7] transition-colors duration-300">
+                                        詳細を見る →
+                                    </span>
+                                </div>
+                            </div>
                         </div>
                     </router-link>
                 </div>

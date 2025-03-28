@@ -66,7 +66,7 @@
                             </tr>
                             <tr class="border-b border-gray-200">
                                 <th class="py-4 text-left w-1/4 text-gray-600">設立</th>
-                                <td class="py-4">1985年4月</td>
+                                <td class="py-4">平成29年8月9日</td>
                             </tr>
                             <tr class="border-b border-gray-200">
                                 <th class="py-4 text-left w-1/4 text-gray-600">資本金</th>
@@ -89,7 +89,10 @@
                             </tr>
                             <tr class="border-b border-gray-200">
                                 <th class="py-4 text-left w-1/4 text-gray-600">所在地</th>
-                                <td class="py-4">〒584-0021 <br>大阪府富田林市中野町1-464-4</td>
+                                <td class="py-4">
+                                    (本社) 〒584-0021 大阪府富田林市中野町1-464-4<br>
+                                    (支社) 〒594-1101 大阪府和泉市室堂町４９５−１
+                                </td>
                             </tr>
                             <tr class="border-b border-gray-200">
                                 <th class="py-4 text-left w-1/4 text-gray-600">電話番号</th>
@@ -139,10 +142,7 @@
                             class="w-full h-[450px] object-cover rounded-lg shadow-lg" />
                     </div>
                     <div class="h-[450px]">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d821.9045369291332!2d135.60700867951795!3d34.51256374796242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600129d101c7d1e7%3A0xbac9db9e6c08f1e!2z44CSNTg0LTAwMjEg5aSn6Ziq5bqc5a-M55Sw5p6X5biC5Lit6YeO55S677yR5LiB55uu77yU77yW77yU4oiS77yU!5e0!3m2!1sja!2sjp!4v1737964640672!5m2!1sja!2sjp"
-                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade" class="rounded-lg shadow-lg"></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3287.6174475828357!2d135.60511507621968!3d34.512581493282525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600129778f9500fd%3A0x7c3b56a3e1ce3d89!2z5ZiJ5rqi5qCq5byP5Lya56S-!5e0!3m2!1sja!2sjp!4v1743080250129!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
 

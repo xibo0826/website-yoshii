@@ -66,7 +66,7 @@
                             </ul>
                             <div class="mt-6">
                                 <h4 class="text-xl font-bold mb-4 text-[#2E7D32]">出張費用</h4>
-                                <p class="text-gray-600 mb-4">上記エリア内であれば、出張費用は一切いただきません。</p>
+                                <p class="text-gray-600 mb-4">出張費用はお問い合わせください。</p>
                                 <p class="text-gray-600">※その他のエリアについてはお問い合わせください。</p>
                             </div>
                         </div>

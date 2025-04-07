@@ -39,7 +39,7 @@
                             <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-end p-4">
                                 <div class="flex justify-between items-center">
                                     <h3 class="text-xl font-bold text-white">
-                                        {{ type.name }}
+                                        
                                     </h3>
                                     <span class="text-[#81C784] hover:text-[#A5D6A7] transition-colors duration-300">
                                         詳細を見る →

@@ -7,7 +7,7 @@
                     <div class="flex items-center text-sm text-gray-600">
                         <router-link :to="{ name: 'used-items-list' }" class="hover:text-[#2E7D32]">中古品買取</router-link>
                         <span class="mx-2">/</span>
-                        <span class="text-gray-900">{{ categoryName }}</span>
+                        <span class="text-gray-900">買取品目一覧</span>
                     </div>
                 </div>
             </div>
@@ -30,18 +30,18 @@
                 <div class="container mx-auto px-4 py-12">
                     <!-- 商品一覧 -->
                     <div class="mb-16">
-                        <h2 class="text-3xl font-bold mb-8">{{ categoryName }}の買取価格表</h2>
+                        <h2 class="text-3xl font-bold mb-8">買取価格表</h2>
                         <div v-if="items.length > 0" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                             <div v-for="item in items" :key="item.id"
                                 class="bg-white rounded-lg shadow-lg overflow-hidden">
                                 <div class="relative h-49">
                                     <img :src="require(`@/assets/${item.image}`)" :alt="item.name"
-                                        class="w-full h-full object-cover" />
+                                        class="w-full object-cover" style="height: 365px;" />
                                 </div>
                                 <div class="p-6">
                                     <div class="flex items-center justify-between mb-4">
                                         <h3 class="text-lg font-bold text-gray-900">{{ item.name }}</h3>
-                                        <span class="text-[#2E7D32] font-bold text-xl">￥{{ formatPrice(item.price) }}円/{{ item.unit }}(税込)</span>
+                                        <span class="text-[#2E7D32] font-bold text-xl">買取価格：お問い合わせ</span>
                                     </div>
                                     <div class="flex items-center text-sm text-gray-600 mb-2">
                                         <i class="fas fa-balance-scale mr-2"></i>
@@ -162,8 +162,8 @@
                                         <div class="border-b pb-4">
                                             <h4 class="text-lg font-semibold mb-2 text-[#2E7D32]">価格</h4>
                                             <p class="text-2xl font-bold text-[#2E7D32]">
-                                                ￥{{ formatPrice(selectedItem.price) }}円/{{ selectedItem.unit }}
-                                                <span class="text-sm font-normal text-gray-600">（税込）</span>
+                                                お問い合わせ
+                                                <span class="text-sm font-normal text-gray-600"></span>
                                             </p>
                                         </div>
                                         <div class="border-b pb-4">

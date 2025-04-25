@@ -129,7 +129,7 @@ export default {
       menuItems: [
         { name: 'ホーム', path: '/home' },
         { name: '会社情報', path: '/company' },
-        { name: 'スクラップ買取', path: '/scrap' },
+        { name: 'スクラップ買取', path: '/scrap' }, 
         { name: '中古買取', path: '/used' },
         { name: '出張買取', path: '/visit' },
         // { name: '骨董品買取', path: '/antique' },
